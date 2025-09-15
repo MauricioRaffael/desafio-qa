@@ -2,12 +2,11 @@
 
 📋 Sobre o Projeto
 
-Este repositório contém a automação de testes end-to-end para o site DemoQA
-, desenvolvida como parte do Desafio de QA.
+Este repositório contém a automação de testes end-to-end para o site DemoQA, desenvolvida como parte do Desafio de QA.
 
 O objetivo do desafio foi:
 
-Implementar cenários de teste em BDD (Behavior Driven Development) utilizando Cucumber.
+Implementar cenários de teste em BDD utilizando Cucumber.
 
 Automatizar interações com formulários, tabelas, janelas e widgets.
 
@@ -46,18 +45,22 @@ ChromeDriver
 compatível com a versão do seu Chrome
 
 ▶️ Como Executar os Testes
-1. Clonar o Repositório
-   git clone https://github.com/<seu-usuario>/<nome-do-repo>.git
-   cd <nome-do-repo>
+1. Clonar
+git clone https://github.com/MauricioRaffael/desafio-qa.git
+cd desafio-qa
 
-2. Executar todos os testes
-   mvn test
+2. Rodar apenas API
+mvn test "-Dcucumber.filter.tags=@api"
 
-3. Executar apenas os testes do formulário (@forms) em modo normal
-   mvn test "-Dcucumber.filter.tags=@forms" "-Dheadless=false"
+3. Rodar segundo desafio (exemplos)
+mvn test "-Dcucumber.filter.tags=@forms" "-Dheadless=true"
+mvn test "-Dcucumber.filter.tags=@windows" "-Dheadless=true"
+mvn test "-Dcucumber.filter.tags=@tables" "-Dheadless=true"
+mvn test "-Dcucumber.filter.tags=@progress" "-Dheadless=true"
+mvn test "-Dcucumber.filter.tags=@sortable" "-Dheadless=true"
 
-4. Executar em modo headless (sem abrir o navegador)
-   mvn test "-Dcucumber.filter.tags=@forms" "-Dheadless=true"
+4. Rodar tudo visível (debug)
+mvn test "-Dheadless=false"
 
 📊 Relatórios
 
