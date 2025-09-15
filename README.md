@@ -47,19 +47,25 @@ compatível com a versão do seu Chrome
 ▶️ Como Executar os Testes
 1. Clonar
 git clone https://github.com/MauricioRaffael/desafio-qa.git
+
 cd desafio-qa
 
-2. Rodar apenas API
+3. Rodar apenas API
 mvn test "-Dcucumber.filter.tags=@api"
 
-3. Rodar segundo desafio (exemplos)
+4. Rodar segundo desafio (exemplos)
 mvn test "-Dcucumber.filter.tags=@forms" "-Dheadless=true"
+
 mvn test "-Dcucumber.filter.tags=@windows" "-Dheadless=true"
+
 mvn test "-Dcucumber.filter.tags=@tables" "-Dheadless=true"
+
 mvn test "-Dcucumber.filter.tags=@progress" "-Dheadless=true"
+
 mvn test "-Dcucumber.filter.tags=@sortable" "-Dheadless=true"
 
-4. Rodar tudo visível (debug)
+5. Rodar tudo visível (debug)
+
 mvn test "-Dheadless=false"
 
 📊 Relatórios
